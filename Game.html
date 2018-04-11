@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.Square
+			{
+				width: 100px;	
+				height: 100px;		
+				text-align: center;
+				font-size: 50pt;
+				font-weight: bold;
+				color: red;
+				//background-color:red;
+			}
+		</style>
+		<script src = "script.js"></script>
+	</head>
+    <body bgcolor = "white" onload="startGame()">
+		<h1><center>Welcome to Tic-Tac-Toe</center></h1>
+		<table width = "100%">
+			<tr valign = "top">
+				<td width = "20%">
+					<b><center>Rules</center></b>
+					<p> The object of this game is to get three in a row. Player One
+						will be known as X and Player Two will be O. Players alternate
+						placing X's and O'x on the game 3x3 board until either player
+						has three in a row or all nine squares are filled.</p>
+				</td>
+			</tr>	
+		</table>
+		<center>
+		<button type = "button" onclick="startGame()">Restart</button>
+		<div id="message">messages will go here</div>
+		
+		<table border = 30>
+			<tr>
+				<td id = "s1" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s2" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s3" class = "Square" onclick="nextMove(this);"></td>
+			</tr>
+			<tr>
+				<td id = "s4" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s5" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s6" class = "Square" onclick="nextMove(this);"></td>
+			</tr>
+			<tr>
+				<td id = "s7" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s8" class = "Square" onclick="nextMove(this);"></td>
+				<td id = "s9" class = "Square" onclick="nextMove(this);"></td>
+			</tr>
+		</table>
+		</center>	
+		<table style = "display: inline-block" width = "100%">
+			<tr>
+				<td width = "50%">
+					<center>
+					<b><font size = "6" <div id = "playerOneName">
+										  playerOneName</div></font></b>
+					<table border = "3">
+						<tr>
+							<td><b>Wins</b>
+								<br> <div id = "playerOneWins">0</div></br>
+							</td>
+							<td><b>Losses</b>
+								<br><div id = "playerOneLosses">0</div></br>
+							</td>
+							<td><b>Ties</b>
+								<br><div id = "playerOneTies">0</div></br>
+							</td>
+							
+						</tr>
+					</table>	
+					</center>
+				</td> 
+				
+				<td width = "50%">
+					<center>
+					<b><font size = "6" <div id = "playerTwoName">
+										  playerTwoName</div></font></b>
+					<table border = "3">
+						<tr>
+							<td><b>Wins</b>
+								<br> <div id = "playerTwoWins"> 0</div></br>
+							</td>
+							<td><b>Losses</b>
+								<br><div id = "playerTwoLosses">0</div></br>
+							</td>
+							<td><b>Ties</b>
+								<br><div id = "playerTwoTies">0</div></br>
+							</td>
+							
+						</tr>
+					</table>	
+					</center>
+				</td> 	
+			</tr>
+		</table>
+	</body>
+</html>
